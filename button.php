@@ -215,25 +215,26 @@
             });
 
             $(document).on('keyup','input#textcomName',function(event){
-                let $target1 = $(event.target)
-                let lengthtext = $target1.val().length;
+                let $target = $(event.target);
+                let count = $target.siblings().eq(1);
+                // console.log(count);
+                let lengthtext = $(this).val().length;
                     if (lengthtext > 60) {
                         alert("已超過上限的內容!!");
                     } else {
-                        $("span#textCount").each(function(){
-                        $("span#textCount").text($target1.val().length + "/60");
-                      });       
+                        count.text($target.val().length + "/60");     
                     }
                 });
+
             $(document).on('keyup','textarea#dealDescId',function(event){
-                let $target2 = $(event.target)
-                let lengthtext = $target2.val().length;
+                let $target = $(event.target);
+                let count = $target.siblings().eq(1);
+                // console.log(count);
+                let lengthtext = $(this).val().length;
                     if (lengthtext > 3000) {
                         alert("已超過上限的內容!!");
                     } else {
-                        $("span#textCount-1").each(function(){
-                        $("span#textCount-1").text($target2.val().length + "/3000");
-                      });
+                        count.text($target.val().length + "/3000");
                     }
                 });
 

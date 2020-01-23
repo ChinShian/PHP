@@ -121,6 +121,7 @@ echo "</pre>";
 
 };
 
+header("Refresh: 0; url=./productlist.php");
 
 
 ?>

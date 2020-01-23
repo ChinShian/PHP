@@ -207,8 +207,8 @@ require_once('./button.php');
                                     <input type="checkbox" id="allChecked" class="tr1">全選/取消全選
                                     <br>
                                     <br>
-                                    <label name="ReverseChecked">
-                                    <input type="checkbox" name="ReverseChecked" id="ReverseChecked" class="tr1">反選
+                                    <!-- <label name="ReverseChecked">
+                                    <input type="checkbox" name="ReverseChecked" id="ReverseChecked" class="tr1">反選 -->
                                     </label>
                                     <br>
                                     <input type="submit" name="smb" class="tr1" value="刪除">

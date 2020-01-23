@@ -51,7 +51,6 @@
             background-size:50px 50px;
             width:200px;
             height:200px;
-            border:1px dashed #999;
             overflow:hidden;
           }
           .openFile{
