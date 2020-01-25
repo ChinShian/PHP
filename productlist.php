@@ -176,6 +176,7 @@ $totalCatogories = $pdo->query($sqlTotalCatogories)->fetch(PDO::FETCH_NUM)[0];
                                             <th>選取</th>
                                             <th>商品名稱</th>
                                             <th>商品圖片</th>
+                                            <th>商品描述</th>
                                             <th>商品價格</th>
                                             <th>商品數量</th>
                                             <th>商品類別</th>

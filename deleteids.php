@@ -9,6 +9,7 @@ require_once('./db.inc.php');
 
 $sql = "DELETE FROM `items` WHERE `itemId` = ? ";
 
+
 $count = 0;
 
 $sqlGetImg = "SELECT `itemImg` FROM `items` WHERE `itemId` = ? ";
@@ -38,7 +39,12 @@ for( $i = 0; $i < count($_POST['chk']); $i++ ){
     $count += $stmt->rowCount();
 
 }
-
+// $sql = "DELETE FROM `multiple_images` WHERE `itemId` = ? ";
+//     $stmt = $pdo->prepare($sql);
+//     $arrParam = [
+//         (int)$_POST['chk']
+//     ];
+//     $stmt->execute($arrParam);
 
 if( $count > 0 ){
     header("Refresh: 3; url=./productlist.php");
