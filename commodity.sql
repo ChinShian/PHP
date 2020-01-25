@@ -25,28 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL COMMENT '流水號',
-  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '使用者帳號',
-  `password` char(40) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '使用者密碼',
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '姓名',
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- 傾印資料表的資料 `admin`
---
-
-INSERT INTO `admin` (`id`, `username`, `password`, `name`, `created_at`, `updated_at`) VALUES
-(9, '1234', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '我誰', '2020-01-13 14:06:29', '2020-01-13 14:06:29');
-
--- --------------------------------------------------------
-
---
 -- 資料表結構 `categoryies`
 --
 
@@ -106,12 +84,6 @@ CREATE TABLE `multiple_images` (
 --
 
 --
--- 資料表索引 `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
 -- 資料表索引 `categoryies`
 --
 ALTER TABLE `categoryies`
@@ -132,12 +104,6 @@ ALTER TABLE `multiple_images`
 --
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `categoryies`
