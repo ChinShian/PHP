@@ -135,7 +135,6 @@ $totalCatogories = $pdo->query($sqlTotalCatogories)->fetch(PDO::FETCH_NUM)[0];
                             </a>
                         </li>
                     </ul>
-
                 </nav>
             </div>
             <!-- 標題 -->

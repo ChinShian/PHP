@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>button</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
     <script>
     $(document).on('click','button#btn_new', function(){ 
               $('div.formtable').append(`
@@ -18,6 +20,9 @@
                                             <div class="inputimg">
                                                 <span>增加更多照片</span>
                                                     <img class="output" height="200" width="200" style="display:none">
+                                                    <div class="Coverphoto">
+                                                        <p style="color:#FFF;text-align:center;margin-top:8px">封面照片</p>
+                                                    </div>
                                                     <input  type="file" name="itemImg[]" value="" class="openFile" multiple>      
                                             </div>
                                         </td>
@@ -246,19 +251,6 @@
                 })
             }) 
 
-            // $(document).on('change','td.cross',function(){
-            //         $("thead.tobodycross").append(`
-            //             <tr  class="inputimgss"> 
-            //                 <td class="cross"> 
-            //                     <div class="inputimg">
-            //                         <span>增加更多照片</span>
-            //                             <img class="output" height="200" width="200" style="display:none">
-            //                             <input  type="file" name="multipleImageImg[]" value="" class="openFile" multiple>      
-            //                     </div>
-            //                 </td>
-            //             </tr>
-            //         `)
-            // })
     </script>
 </head>
 <body>

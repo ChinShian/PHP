@@ -80,6 +80,14 @@
               width:800px;
               height:45px;
           }
+          .Coverphoto{
+              position:absolute;
+              width:200px;
+              height:40px;
+              background:rgba(80,220,220,0.8);
+              left:0%;
+              top:80%;
+          }
     </style>
 
 </head>
@@ -174,13 +182,15 @@
                                        <th><h2>編輯商品照片</h2></th>
                                     </tr>
                                     <thead id="mythead" class="tobodycross" >
-                                    <tr class="inputimgss"> 
+                                    <tr> 
                                         <td class="cross"> 
                                             <div class="inputimg">
-                                                
-                                                <span>增加更多照片</span>
+                                                    <span>增加更多照片</span>
                                                     <img class="output" height="200" width="200" style="display:none">
-                                                    <input  type="file" name="itemImg[]" value="" class="openFile" multiple>      
+                                                    <div class="Coverphoto">
+                                                        <p style="color:#FFF;text-align:center;margin-top:8px">封面照片</p>
+                                                    </div>  
+                                                    <input  type="file" name="itemImg[]" value="" class="openFile" multiple>
                                             </div>
                                         </td>
                                     </tr>
