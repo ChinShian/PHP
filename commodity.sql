@@ -65,6 +65,13 @@ CREATE TABLE `items` (
   `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT '更新時間'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `items`
+--
+
+INSERT INTO `items` (`itemId`, `itemName`, `itemImg`, `itemDescription`, `itemPrice`, `itemQty`, `itemCategoryId`, `itemColor`, `created_at`, `updated_at`) VALUES
+(188, '123123', 'jq範例1.jpg', '123', 30000, 10, '智慧手錶', '黑', '2020-01-31 23:35:58', '2020-01-31 23:35:58');
+
 -- --------------------------------------------------------
 
 --
@@ -78,6 +85,15 @@ CREATE TABLE `multiple_images` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp() COMMENT '新增時間	',
   `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT '更新時間'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `multiple_images`
+--
+
+INSERT INTO `multiple_images` (`multipleImageId`, `multipleImageImg`, `itemId`, `created_at`, `updated_at`) VALUES
+(167, 'jq範例2.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58'),
+(168, 'jq範例3.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58'),
+(169, 'jq範例4.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58');
 
 --
 -- 已傾印資料表的索引
@@ -115,13 +131,13 @@ ALTER TABLE `categoryies`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `items`
 --
 ALTER TABLE `items`
-  MODIFY `itemId` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品編號', AUTO_INCREMENT=142;
+  MODIFY `itemId` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品編號', AUTO_INCREMENT=189;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `multiple_images`
 --
 ALTER TABLE `multiple_images`
-  MODIFY `multipleImageId` int(11) NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=55;
+  MODIFY `multipleImageId` int(11) NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=170;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

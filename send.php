@@ -1,10 +1,10 @@
 <?php 
 require_once('./db.inc.php');
 
-echo "<pre>";
-print_r($_FILES);
-print_r($_POST);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_FILES);
+// print_r($_POST);
+// echo "</pre>";
 // exit();
 
 
@@ -64,9 +64,9 @@ for($i=0;$i <count($_FILES['itemImg']["name"]); $i++){
         $_POST['itemColor'][$i]
     ];
     
-    echo "<pre>";
-print_r("i=".$i.$arrParam);
-echo "</pre>";
+//     echo "<pre>";
+// print_r("i=".$i.$arrParam);
+// echo "</pre>";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute($arrParam);
