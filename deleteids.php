@@ -46,7 +46,7 @@ for($i = 0; $i < count($_POST['chk']); $i++){
         $arr = $stmt_img->fetchAll(PDO::FETCH_ASSOC)[0];
         
         if( $arr['multipleImageImg']!== NULL ){
-            @unlink("./images/".$arr['multipleImageImg']);
+            unlink("./images/".$arr['multipleImageImg']);
         }
     }
             $arrParam1 = [

@@ -88,6 +88,7 @@
               left:0%;
               top:80%;
           }
+
     </style>
 
 </head>
@@ -116,7 +117,7 @@
                                 class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="./commodity.php">新增商品</a></li>
-                            <li><a href="./productlist.php">商品列表</a></li>
+                            <li><a href="./productlist.php">我的商品</a></li>
                         </ul>
                     </li>
                 </ul>

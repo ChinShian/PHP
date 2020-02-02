@@ -96,7 +96,7 @@ $totalCatogories = $pdo->query($sqlTotalCatogories)->fetch(PDO::FETCH_NUM)[0];
                                 class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="./commodity.php">新增商品</a></li>
-                            <li><a href="./productlist.php">商品列表</a>
+                            <li><a href="./productlist.php">我的商品</a>
                                 <ul>
                                     <!-- <li><a href="./smartwatch.php?itemCategoryId=<?php echo $arr[$i]['itemCategoryId']; ?>">智慧手錶</a></li>
                                     <li><a href="">藍芽耳機</a></li>
@@ -140,7 +140,7 @@ $totalCatogories = $pdo->query($sqlTotalCatogories)->fetch(PDO::FETCH_NUM)[0];
             <!-- 標題 -->
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
-                    <h2>商品列表</h2>
+                    <h2>我的商品</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Home</a>

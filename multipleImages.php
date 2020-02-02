@@ -19,11 +19,42 @@ require_once('./button.php');
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-    .border {
-        border: 1px solid;
+    .tobodycross {
+        display:flex;
+        flex-wrap:wrap;
+        box-sizing:border-box;
+        }
+    .inputimg{
+        position:relative;
+        background:url(./png/add.png)no-repeat 50% 35%;
+        background-size:50px 50px;
+        width:200px;
+        height:200px;
+        overflow:hidden;
+    }
+    .openFile{
+        position:absolute;
+        left:0;
+        opacity:0;
+        width:200px;
+        height:200px;
+    }
+    .cross{
+        width:200px;
+        height:200px;
+    }
+    .cross span{
+        line-height:250px;
+        margin-left:25%;
+    }
+    .output{
+        position:absolute;
+        left:-1px;
+        top:-1px;
     }
     img.previous_images{
         width: 100px;
+        height:100px;
     }
     </style>
 </head>
@@ -52,7 +83,7 @@ require_once('./button.php');
                                 class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="./commodity.php">新增商品</a></li>
-                            <li><a href="./productlist.php">商品列表</a></li>
+                            <li><a href="./productlist.php">我的商品</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -117,11 +148,10 @@ require_once('./button.php');
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th>選擇</th>
-                                            <th>圖片路徑</th>
+                                            <th>多圖圖片選擇</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="tobodycross">
                                     <?php
                                     $sql = "SELECT `multipleImageId`, `multipleImageImg`, `created_at`, `updated_at`
                                             FROM `multiple_images`
@@ -156,8 +186,11 @@ require_once('./button.php');
                                 }
                                 ?>
                                     </table>
+                                    <br>
                                     <input type="checkbox" id="allChecked" class="tr1">全選/取消全選
-                                    <input type="submit" name="smb_delete" value="刪除">
+                                    <br>
+                                    <br>
+                                    <input class="ladda-button btn btn-danger" data-style="expand-right" type="submit" name="smb" class="tr1" value="刪除" >
                                     <input type="hidden" name="itemId" value="<?php echo (int)$_GET['itemId']; ?>">
                             </form>
 
@@ -165,25 +198,25 @@ require_once('./button.php');
 
                                 <form name="myForm" method="POST" action="./insertMultipleImages.php" enctype="multipart/form-data">
                                     <table>
-                                        <thead>
-                                            <tr>
-                                            <th>多圖上傳</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input type="file" name="multipleImageImg[]" value="" multiple />
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td><input type="submit" name="smb_add" value="新增"></td>
-                                                <td><input type="button" value="返回" onclick="location.href='./productlist.php'"></td>
-                                            </tr>
-                                        </tfoot>
+                                    <tr>
+                                       <th><h2>編輯商品照片</h2></th>
+                                    </tr>
+                                    <thead id="mythead" class="tobodycross" >
+                                    <tr> 
+                                        <td class="cross"> 
+                                            <div class="inputimg">
+                                                    <span>增加更多照片</span>
+                                                    <img class="output" height="200" width="200" style="display:none">
+                                                    <input  type="file" name="multipleImageImg[]" value="" class="openFile" multiple>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </thead>
                                     </table>
+                                        
+                                    <input type="submit" name="smb_add" class="ladda-button btn btn-info" data-style="slide-up" value="新增">
+                                    <input type="button" class="ladda-button btn btn-info" data-style="slide-up" value="返回" onclick="location.href='./productlist.php'" style="margin-left:820px">
+
                                     <input type="hidden" name="itemId" value="<?php echo (int)$_GET['itemId']; ?>">
                                 </form>
                             </div>

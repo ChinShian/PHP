@@ -207,18 +207,6 @@
                 })
             });
 
-            $(document).ready(function(){
-                $(document).on('click', 'input#comCategoryId',function() {
-                $.ajax({
-                    method:'POST',
-                    url:"smartphone.php",
-                    data:{
-                        'comCategoryId':$('#comCategoryId').val(),
-                    }
-                })
-                })
-            });
-
             $(document).on('keyup','input#textcomName',function(event){
                 let $target = $(event.target);
                 let count = $target.siblings().eq(1);
@@ -248,9 +236,9 @@
                     "height":"300px",
                     "transition":"0.5s",
                     "overflow-y":"scroll"
-                })
+                });
             }) 
-
+                
     </script>
 </head>
 <body>

@@ -81,7 +81,7 @@ require_once('./button.php');
                                 class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="./commodity.php">新增商品</a></li>
-                            <li><a href="./productlist.php">商品列表</a></li>
+                            <li><a href="./productlist.php">我的商品</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -214,11 +214,11 @@ require_once('./button.php');
                                     <input type="checkbox" id="allChecked" class="tr1">全選/取消全選
                                     <br>
                                     <br>
-                                    <label name="ReverseChecked">
+                                    <!-- <label name="ReverseChecked">
                                     <input type="checkbox" name="ReverseChecked" id="ReverseChecked" class="tr1">反選
-                                    </label>
+                                    </label> -->
                                     <br>
-                                    <input type="submit" name="smb" class="tr1" value="刪除">
+                                    <input class="ladda-button btn btn-danger" data-style="expand-right" type="submit" name="smb" class="tr1" value="刪除">
                                 </form>
                             </div>
                         </div>

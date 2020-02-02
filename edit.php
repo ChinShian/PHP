@@ -88,7 +88,7 @@ require_once('./button.php');
                                 class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="./commodity.php">新增商品</a></li>
-                            <li><a href="./productlist.php">商品列表</a></li>
+                            <li><a href="./productlist.php">我的商品</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -259,10 +259,10 @@ require_once('./button.php');
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                    <td colspan="6"><input type="submit" name="smb" value="修改">
-                                    </td>
+                                            <td><input type="submit" name="smb" value="修改" class="ladda-button btn btn-info" data-style="slide-up"></td>
+                                            <td><input type="button" class="ladda-button btn btn-info" data-style="slide-up" value="返回" onclick="location.href='./productlist.php'" style="margin-left:820px"></td>
                                         </tr>
-                                    </tfoo>
+                                    </tfoot>
                                 </table>
                                 <input type="hidden" name="editId" value="<?php echo (int)$_GET['editId']; ?>">
                             </form>
