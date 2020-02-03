@@ -238,7 +238,17 @@
                     "overflow-y":"scroll"
                 });
             }) 
-                
+            
+            $(document).on('click','input.specification',function(){
+                console.log('123')
+            })
+
+            $(document).on('click','button.buttontest',function(){
+                if($("input.openFile").is(":file")){
+                    $("div.inputimg").children().eq(1).remove()
+                    http://hk.voidcc.com/question/p-khffuort-kt.html
+                }
+            })
     </script>
 </head>
 <body>

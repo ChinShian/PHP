@@ -80,6 +80,15 @@
               width:800px;
               height:45px;
           }
+          .specification{
+              padding:10px;
+              border:1px dashed rgb(135,206,235);
+              border-radius:5px;
+              background:#FFF;
+              width:800px;
+              height:45px;
+              color:rgb(135,206,235);
+          }
           .Coverphoto{
               position:absolute;
               width:200px;
@@ -88,7 +97,17 @@
               left:0%;
               top:80%;
           }
-
+          .buttontest{
+              position:absolute;
+              right:20%;
+              bottom:130%;
+              width:50px;
+              height:50px;
+              background:rgba(255,0,0,0.5);
+              border:none;
+              border-radius:50%;
+              z-index:1;
+          }
     </style>
 
 </head>
@@ -189,6 +208,7 @@
                                                     <span>增加更多照片</span>
                                                     <img class="output" height="200" width="200" style="display:none">
                                                     <div class="Coverphoto">
+                                                        <button class="buttontest" type="button"></button>
                                                         <p style="color:#FFF;text-align:center;margin-top:8px">封面照片</p>
                                                     </div>  
                                                     <input  type="file" name="itemImg[]" value="" class="openFile" multiple>
@@ -198,7 +218,7 @@
                                     </thead>
                                 </table>
                                 <table class="table">
-                                    <tbody>
+                                    <thead>
                                 <tr>
                                     <tr>
                                         <th><h2>基本資訊</h2></th>
@@ -249,6 +269,12 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th>規格</th>
+                                            <td>
+                                                <input type="button" class="specification" value="開啟商品規格">
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
                                             <th>商品顏色</th>
                                             <td>
                                                 <select name="itemColor[]" class="inputtest">
@@ -259,10 +285,10 @@
                                                     <option value="灰">灰</option>
                                                 </select>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                     </tr>
                                 </tr>
-                                    </tbody>                            
+                                    </thead>                            
                                     </table>
                                     </div>
                                     <input type="submit" name="sub" value="新增商品" class="ladda-button btn btn-danger" data-style="expand-right">

@@ -30,31 +30,25 @@ for( $i = 0; $i < count($_POST['chk']); $i++ ){
 }
 
 
-$sql1 = "DELETE FROM `multiple_images` WHERE `itemId` = ? ";
-
-$sqlImg = "SELECT `multipleImageImg` FROM `multiple_images` WHERE `itemId` = ? ";
-$stmt_img = $pdo->prepare($sqlImg);
-
 for($i = 0; $i < count($_POST['chk']); $i++){
     $arrParam = [
         $_POST['chk'][$i]
     ];
-    $stmt_img->execute($arrParam);
+
+$sqlImg = "SELECT `multipleImageImg` FROM `multiple_images` WHERE `itemId` = ? ";
+$stmt_img = $pdo->prepare($sqlImg);
+$stmt_img->execute($arrParam);
 
     if($stmt_img->rowCount() > 0) {
         //取得檔案資料 (單筆)
-        $arr = $stmt_img->fetchAll(PDO::FETCH_ASSOC)[0];
-        
-        if( $arr['multipleImageImg']!== NULL ){
-            unlink("./images/".$arr['multipleImageImg']);
-        }
+        $arr = $stmt_img->fetchAll(PDO::FETCH_ASSOC);
+        $bool = unlink("./images/".$arr[0]['multipleImageImg']);
     }
-            $arrParam1 = [
-                $_POST['chk'][$i]
-            ];
+    if($bool === true){
+    $sql1 = "DELETE FROM `multiple_images` WHERE `itemId` = ? ";
             $stmt = $pdo->prepare($sql1);
-            $stmt->execute($arrParam1);
-    
+            $stmt->execute($arrParam);
+    }
 }
 // echo "<pre>";
 // print_r($_POST);
