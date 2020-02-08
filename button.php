@@ -243,12 +243,11 @@
                 console.log('123')
             })
 
-            $(document).on('click','button.buttontest',function(){
-                if($("input.openFile").is(":file")){
-                    $("div.inputimg").children().eq(1).remove()
-                    http://hk.voidcc.com/question/p-khffuort-kt.html
-                }
-            })
+            // $(document).on('click','button.buttontest',function(){
+            //     if($("input.openFile").is(":file")){
+            //         $("div.inputimg").children().eq(1).remove()
+            //     }
+            // })
     </script>
 </head>
 <body>

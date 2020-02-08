@@ -97,7 +97,7 @@
               left:0%;
               top:80%;
           }
-          .buttontest{
+          /* .buttontest{
               position:absolute;
               right:20%;
               bottom:130%;
@@ -107,7 +107,7 @@
               border:none;
               border-radius:50%;
               z-index:1;
-          }
+          } */
     </style>
 
 </head>
@@ -208,7 +208,7 @@
                                                     <span>增加更多照片</span>
                                                     <img class="output" height="200" width="200" style="display:none">
                                                     <div class="Coverphoto">
-                                                        <button class="buttontest" type="button"></button>
+                                                        <!-- <button class="buttontest" type="button"></button> -->
                                                         <p style="color:#FFF;text-align:center;margin-top:8px">封面照片</p>
                                                     </div>  
                                                     <input  type="file" name="itemImg[]" value="" class="openFile" multiple>
