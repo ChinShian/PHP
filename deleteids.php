@@ -42,23 +42,24 @@ $stmt_img->execute($arrParam);
     if($stmt_img->rowCount() > 0) {
         //取得檔案資料 (單筆)
         $arr = $stmt_img->fetchAll(PDO::FETCH_ASSOC);
-        $bool = unlink("./images/".$arr[0]['multipleImageImg']);
+
+        for( $k = 0 ; $k <count($arr) ;$k++){
+            if(file_exists("./images/".$arr[$k]['multipleImageImg'])){
+                unlink("./images/".$arr[$k]['multipleImageImg']);
+            }
+        
+            $sql1 = "DELETE FROM `multiple_images` WHERE `itemId` = ? ";
+                    $stmt = $pdo->prepare($sql1);
+                    $stmt->execute($arrParam);
+        }
+        
     }
-    if($bool === true){
-    $sql1 = "DELETE FROM `multiple_images` WHERE `itemId` = ? ";
-            $stmt = $pdo->prepare($sql1);
-            $stmt->execute($arrParam);
-    }
+    
 }
 // echo "<pre>";
 // print_r($_POST);
 // echo "</pre>";
 // exit();
 
-if( $stmt->rowCount() > 0 ){
-    header("Refresh: 3; url=./productlist.php");
+    header("Refresh: 1; url=./productlist.php");
     echo "刪除成功";
-} else {
-    header("Refresh: 3; url=./productlist.php");
-    echo "刪除失敗";
-}

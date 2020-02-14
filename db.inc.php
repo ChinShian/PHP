@@ -2,7 +2,7 @@
 //資料庫主機設定
 $db_host = "localhost";
 $db_username = "root";
-$db_password = "T1st@localhost";
+$db_password = "";
 $db_name = "commodity";
 $db_charset = "utf8mb4";
 $db_collate = "utf8mb4_unicode_ci";

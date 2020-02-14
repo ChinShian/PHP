@@ -268,13 +268,13 @@
                                                 <input type="text" name="itemQty[]" value="" class="inputtest">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <th>規格</th>
                                             <td>
                                                 <input type="button" class="specification" value="開啟商品規格">
                                             </td>
-                                        </tr>
-                                        <!-- <tr>
+                                        </tr> -->
+                                        <tr>
                                             <th>商品顏色</th>
                                             <td>
                                                 <select name="itemColor[]" class="inputtest">
@@ -285,7 +285,7 @@
                                                     <option value="灰">灰</option>
                                                 </select>
                                             </td>
-                                        </tr> -->
+                                        </tr>
                                     </tr>
                                 </tr>
                                     </thead>                            
