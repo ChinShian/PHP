@@ -30,7 +30,7 @@ function searchForId($id, $array) {
 $newArray = $_FILES["multipleImageImg"]["name"];
 // print_r($newArray);
 searchForId('',$newArray);
-print_r($blankArray);
+// print_r($blankArray);
 // exit();
 
 
@@ -39,7 +39,7 @@ print_r($blankArray);
 $counting = 0;
 for($i=0;$i <count($_FILES['itemImg']["name"]); $i++){
     $counting ++;
-    echo 'count:'. $counting;
+    // echo 'count:'. $counting;
     if($_FILES["itemImg"]["error"][$i]===0){
         $itemImg = $_FILES["itemImg"]['name'][$i];
 
@@ -73,17 +73,17 @@ for($i=0;$i <count($_FILES['itemImg']["name"]); $i++){
     $orderId = $pdo->lastInsertId();
     if( $stmt->rowCount() > 0 ){
         // header("Refresh: 3; url=./productlist.php");
-        echo "i=".$i."更新成功";
+        // echo "i=".$i."更新成功";
         // exit();
     } else {
         // header("Refresh: 3; url=./productlist.php");
-        echo  "i=".$i."沒有任何更新";
+        // echo  "i=".$i."沒有任何更新";
         // exit();
     }
     
 
-    echo '$blankArray[$i*2]='.$blankArray[$i*2].'/';
-    echo '$blankArray[$i*2+1]='.$blankArray[$i*2+1].'/';
+    // echo '$blankArray[$i*2]='.$blankArray[$i*2].'/';
+    // echo '$blankArray[$i*2+1]='.$blankArray[$i*2+1].'/';
     for($k = $blankArray[$i*2]; $k < $blankArray[$i*2+1]; $k++){
 
         // exit();
@@ -121,7 +121,7 @@ for($i=0;$i <count($_FILES['itemImg']["name"]); $i++){
 
 };
 
-header("Refresh: 0; url=./productlist.php");
-
+header("Refresh: 3; url=./productlist.php");
+echo "新增成功";
 
 ?>

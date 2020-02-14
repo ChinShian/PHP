@@ -70,7 +70,7 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`itemId`, `itemName`, `itemImg`, `itemDescription`, `itemPrice`, `itemQty`, `itemCategoryId`, `itemColor`, `created_at`, `updated_at`) VALUES
-(188, '123123', 'jq範例1.jpg', '123', 30000, 10, '智慧手錶', '黑', '2020-01-31 23:35:58', '2020-01-31 23:35:58');
+(239, '我誰', 'jq範例1.jpg', '我誰!!!!!!!!!!!!!!!!!!我瘋子!!!!!!!!!!', 30000, 100, '其他', '黑', '2020-02-14 22:57:08', '2020-02-14 22:57:08');
 
 -- --------------------------------------------------------
 
@@ -91,9 +91,9 @@ CREATE TABLE `multiple_images` (
 --
 
 INSERT INTO `multiple_images` (`multipleImageId`, `multipleImageImg`, `itemId`, `created_at`, `updated_at`) VALUES
-(167, 'jq範例2.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58'),
-(168, 'jq範例3.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58'),
-(169, 'jq範例4.jpg', 188, '2020-01-31 23:35:58', '2020-01-31 23:35:58');
+(304, 'jq範例2.jpg', 239, '2020-02-14 22:57:08', '2020-02-14 22:57:08'),
+(305, 'jq範例3.jpg', 239, '2020-02-14 22:57:08', '2020-02-14 22:57:08'),
+(306, 'jq範例4.jpg', 239, '2020-02-14 22:57:08', '2020-02-14 22:57:08');
 
 --
 -- 已傾印資料表的索引
@@ -131,13 +131,13 @@ ALTER TABLE `categoryies`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `items`
 --
 ALTER TABLE `items`
-  MODIFY `itemId` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品編號', AUTO_INCREMENT=189;
+  MODIFY `itemId` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品編號', AUTO_INCREMENT=240;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `multiple_images`
 --
 ALTER TABLE `multiple_images`
-  MODIFY `multipleImageId` int(11) NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=170;
+  MODIFY `multipleImageId` int(11) NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=307;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

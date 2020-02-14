@@ -18,15 +18,7 @@ require_once('./button.php');
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style>
-         .table h2 {
-                text-align:left;
-          }
-          .table  th{
-              text-align:right;
-          } 
-          .table  td{
-              text-align:center;
-          } 
+        
      .inputimg{
             position:relative;
             background:url(./png/add.png)no-repeat 50% 35%;
@@ -42,18 +34,7 @@ require_once('./button.php');
             width:200px;
             height:200px;
           }
-          #cross{
-            width:200px;
-            height:200px;
-          }
-          #cross span{
-              line-height:250px;
-          }
-          .output{
-            position:absolute;
-            left:-1px;
-            top:-1px;
-          }
+        
           .input{
               padding:10px;
               border:1px solid #999;
@@ -172,15 +153,15 @@ require_once('./button.php');
                                        <th><h2>編輯商品照片</h2></th>
                                     </tr>
                                     <tr> 
-                                         <td id="cross"> 
+                                         <td> 
                                             <div class="inputimg">
-                                                <span>增加更多照片</span>
                                                 <?php if($arr['itemImg'] !== NULL) { ?>
-                                                <img class="output" height="200" width="200" src="./images/<?php echo $arr['itemImg']; ?>" >
+                                                <img  height="200" width="200" src="./images/<?php echo $arr['itemImg']; ?>" >
                                             <?php } ?>
-                                            <input type="file" name="itemImg" class="openFile">
-                                                    <!-- <img class="output" height="200"  style="display:none"> -->
-                                                    <!-- <input  type="file" name="itemImg[]" value="" class="openFile" multiple>       -->
+                                            <input type="file" name="itemImg" class="openFile" id="picture">
+                                            </div>
+                                            <div>
+                                                <span id="text"></span>
                                             </div>
                                         </td>
                                     </tr>
@@ -296,7 +277,12 @@ require_once('./button.php');
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
-
+    <script> 
+    let $picture = $("#picture");
+    $picture.change(function(){
+        $('#text').text($picture[0].files[0].name)
+    })
+    </script>                              
 
 </body>
 

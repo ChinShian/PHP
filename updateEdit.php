@@ -34,13 +34,8 @@ $arrParam = [
 //判斷檔案上傳是否正常，error = 0 為正常
 if( $_FILES["itemImg"]["error"] === 0 ) {
     //為上傳檔案命名
-    $strDatetime ="img_".date("YmdHis");
+    $itemImg = $_FILES["itemImg"]['name'];
         
-    //找出副檔名
-    $extension = pathinfo($_FILES["itemImg"]["name"], PATHINFO_EXTENSION);
-
-    //建立完整名稱
-    $itemImg = $strDatetime.".".$extension;
 
     //若上傳成功，則將上傳檔案從暫存資料夾，移動到指定的資料夾或路徑
     if( move_uploaded_file($_FILES["itemImg"]["tmp_name"], "./images/".$itemImg) ) {
