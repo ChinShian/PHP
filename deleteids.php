@@ -1,6 +1,6 @@
 <?php
 require_once('./db.inc.php');
-
+//單圖
 $sql = "DELETE FROM `items` WHERE `itemId` = ? ";
 
 $sqlGetImg = "SELECT `itemImg` FROM `items` WHERE `itemId` = ? ";
@@ -29,7 +29,7 @@ for( $i = 0; $i < count($_POST['chk']); $i++ ){
 
 }
 
-
+//多圖
 for($i = 0; $i < count($_POST['chk']); $i++){
     $arrParam = [
         $_POST['chk'][$i]
