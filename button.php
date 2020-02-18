@@ -238,16 +238,6 @@
                     "overflow-y":"scroll"
                 });
             }) 
-            
-            $(document).on('click','input.specification',function(){
-                console.log('123')
-            })
-
-            // $(document).on('click','button.buttontest',function(){
-            //     if($("input.openFile").is(":file")){
-            //         $("div.inputimg").children().eq(1).remove()
-            //     }
-            // })
     </script>
 </head>
 <body>

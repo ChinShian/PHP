@@ -27,7 +27,7 @@ require_once('./button.php');
             height:200px;
 
           }
-          .openFile{
+          .openfile{
             position:absolute;
             left:0;
             opacity:0;
@@ -156,9 +156,9 @@ require_once('./button.php');
                                          <td> 
                                             <div class="inputimg">
                                                 <?php if($arr['itemImg'] !== NULL) { ?>
-                                                <img  height="200" width="200" src="./images/<?php echo $arr['itemImg']; ?>" >
+                                                <img class="imgfile" height="200" width="200" src="./images/<?php echo $arr['itemImg']; ?>" >
                                             <?php } ?>
-                                            <input type="file" name="itemImg" class="openFile" id="picture">
+                                            <input type="file" name="itemImg" class="openfile" id="picture">
                                             </div>
                                             <div>
                                                 <span id="text"></span>
@@ -278,10 +278,16 @@ require_once('./button.php');
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
     <script> 
-    let $picture = $("#picture");
-    $picture.change(function(){
-        $('#text').text($picture[0].files[0].name)
-    })
+    $(document).on('change', 'input#picture',function(event){
+            let input = event.target;
+            let reader = new FileReader();
+            reader.readAsDataURL(input.files[0]);
+
+            reader.onload = function(){
+                let dataURL = reader.result;
+                $(".imgfile").attr('src',dataURL).show();
+            }
+        });
     </script>                              
 
 </body>
